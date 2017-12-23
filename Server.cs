@@ -63,7 +63,7 @@ namespace WebGymnasticApp
         }
 
         //Rating method
-        public List<Rating> GetRatings(string discipline, int idCompetition)
+        public List<Rating> GetRatings(int idCompetition, string discipline)
         {
             return _repository.GetDisciplineRatings(discipline, idCompetition);
         }

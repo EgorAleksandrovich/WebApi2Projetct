@@ -11,11 +11,11 @@ namespace WebGymnasticApp.Controllers
     public class RatingController : ApiController
     {
         Server _server = new Server();
-
         [HttpGet]
-        public List<Rating> GetRating(string id, Competition competition)
+        [Route("api/rating/{id}/{discipline}")]
+        public List<Rating> GetRating(int id, string discipline)
         {
-            return _server.GetRatings(id, competition.Id);
+            return _server.GetRatings(id, discipline);
         }
     }
 }

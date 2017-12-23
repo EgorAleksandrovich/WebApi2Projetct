@@ -30,12 +30,11 @@ namespace WebGymnasticApp.Controllers
                 _server.AddGymnast(newGymnastInf, id);
             }
         }
-        
-        [Route("api/competition/{competitionId}/{controller}/{id}")]
         [HttpDelete]
-        public void DeleteCompetitor(int competitionId, int id)
+        public void DeleteCompetitor(int id, Competition competition)
         {
-            _server.DeleteCompetitor(id, competitionId);
+            _server.DeleteCompetitor(id, competition.Id);
         }
+
     }
 }
