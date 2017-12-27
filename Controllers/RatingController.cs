@@ -34,5 +34,11 @@ namespace WebGymnasticApp.Controllers
                 _server.PutRatings(rating);
             }
         }
+
+        [HttpDelete]
+        public void Delete(int id)
+        {
+            _server.DeleteRating(id);
+        }
     }
 }
